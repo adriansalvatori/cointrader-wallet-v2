@@ -1,0 +1,21 @@
+{
+    "name": "cointrader-wallet-v2",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "parcel *.html --no-cache",
+        "build": "parcel build *.html --no-cache"
+    },
+    "dependencies": {
+        "bodymovin": "^4.13.0",
+        "bulma": "^0.9.2",
+        "bulma-helpers": "^0.3.12",
+        "feather-icons": "^4.28.0",
+        "jarallax": "^1.12.5"
+    },
+    "devDependencies": {
+        "cssnano": "^4.1.10",
+        "sass": "^1.32.8"
+    }
+}

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+@import "./node_modules/bulma/sass/utilities/initial-variables";
+//@import "./node_modules/bulma-helpers";
+$dark:#10212B;
+$body-color: $dark;
+$body-family: 'Montserrat',
+sans-serif;
+$primary: #0672F5;
+$success: #00FF72;
+$link: $primary;
+@import "./node_modules/bulma/bulma";
+
+/** Setup Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.is-bordered {
+    border: solid 2px $dark;
+    &:hover,
+    &.focus {
+        border: solid 2px $link;
+        .title,
+        p {
+            color: $link
+        }
+    }
+}
+
+.is-overlay {
+    img {
+        width: 100%;
+        &.cover {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 1200px;
+            max-width: unset;
+        }
+    }
+    &.ball {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        img {
+            max-width: 25vw;
+            transform: translateY(-20%)
+        }
+    }
+}
+
+.is-borderless {
+    border: solid 0px white !important
+}
+
+.tabs {
+    a {
+        margin-bottom: -1px;
+    }
+    ul {
+        border-bottom: solid 1px rgba(0, 0, 0, 0.05) !important
+    }
+}
+
+.has-cursor-pointer {
+    cursor: pointer !important;
+}
+
+
+/**Actual styles */
+
+body {
+    letter-spacing: 2px;
+}
+
+.title {
+    letter-spacing: 4px;
+}
+
+.waves {
+    background: url(./assets/01.jpg);
+    opacity: 0.8;
+    background-size: cover;
+    mix-blend-mode: color-burn;
+}
+
+.intraders-badge {
+    svg {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @media (max-width: 1280px) {
+            display: none;
+        }
+    }
+}
+
+.preloader {
+    position: fixed;
+    z-index: 9999999;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #003cff;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    &.hide {
+        opacity: 0;
+        transition: ease-in 0.8s;
+    }
+}
